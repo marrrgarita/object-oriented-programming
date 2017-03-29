@@ -9,13 +9,21 @@ class Player
 
   def level_up
     @lives += 1
-    return @lives
+    return "Level up! You now have #{@lives} lives"
   end
 
   def collect_treasure
     @gold_coins += 1
-    return @gold_coins
+
+    if @gold_coins % 10 == 0
+      level_up
+    else
+      return "You have #{@gold_coins} gold coins"
+    end
+
   end
+
+
 
 
 end
