@@ -20,10 +20,31 @@ class Player
     else
       return "You have #{@gold_coins} gold coins"
     end
-
   end
 
+  def reset
+    @gold_coins = 0
+    @health_points = 10
+    @lives = 5
+    return "Gold Coins:#{@gold_coins} Health Points #{@health_points} Lives:#{@lives}"
+  end
 
+  def do_battle(damage)
+    @health_points -= damage
 
+    if @health_points < 1
+      @lives -= 1
+
+      @health_points = 10
+
+      return "You have died. Your lives are now at #{@lives}"
+
+    elsif @lives == 0
+      reset
+
+    else
+      return "Your health is at #{@health_points} points"
+    end
+  end
 
 end
