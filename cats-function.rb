@@ -6,4 +6,6 @@ mittens = Cat.new("Mittens", "Kitty Chow", 12)
 whiskers.eats_at
 mittens.eats_at
 
+
+
 puts "finished!"
