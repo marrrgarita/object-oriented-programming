@@ -26,7 +26,7 @@ class Player
     @gold_coins = 0
     @health_points = 10
     @lives = 5
-    return "Gold Coins:#{@gold_coins} Health Points #{@health_points} Lives:#{@lives}"
+    return "*GAME RESET* Gold Coins:#{@gold_coins} Health Points #{@health_points} Lives:#{@lives}"
   end
 
   def do_battle(damage)
