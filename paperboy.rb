@@ -29,4 +29,8 @@ class Paperboy
     return @earnings
   end
 
+  def report
+    "I'm #{name}, I've delivered #{experience} papers and I've earned #{earnings}"
+  end
+
 end
